@@ -64,3 +64,18 @@ Next Steps
 ==========
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+
+mkdir boom-chef-workshop
+cd boom-chef-workshop
+git clone https://github.com/opscode/chef-repo.git .
+
+vim Vagrantfile 
+vim Cheffile
+knife cookbook create base -o site-cookbooks
+knife cookbook create app-server -o site-cookbooks
+
+vim roles/app-server.rb
+
+vim site-cookbooks/app-server/recipes/default.rb
+vim site-cookbooks/app-server/attributes/default.rb
+vim site-cookbooks/app-server/recipes/directories.rb
