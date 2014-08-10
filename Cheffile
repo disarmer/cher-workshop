@@ -1,0 +1,14 @@
+site 'https://supermarket.getchef.com/api/v1'
+
+cookbook "apt"
+cookbook "build-essential"
+cookbook "rbenv"
+cookbook "chruby"
+
+cookbook "app-server", path: "site-cookbooks/app-server"
+cookbook "base", path: "site-cookbooks/base"
+
+cookbook "ruby", git: "https://github.com/ArtemPyanykh/chef_ruby"
+cookbook "ruby_build", git: "https://github.com/fnichol/chef-ruby_build"
+cookbook "chef-chruby", git: "https://github.com/ArtemPyanykh/chef-chruby"
+#, path: "site-cookbooks/chruby"

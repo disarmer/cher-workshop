@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "test": {
+      "node": "test-vm",
+      "ip": "192.168.28.4",
+      "host": "test-vm",
+      "roles": [
+	"staging",
+        "app-server"
+      ],
+      "recipes": [
+        "ruby_build"
+      ],
+      "memory": 1024
+    }
+  }
+}
