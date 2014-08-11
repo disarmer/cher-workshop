@@ -1,0 +1,54 @@
+SITE
+  remote: https://supermarket.getchef.com/api/v1
+  specs:
+    7-zip (1.0.2)
+      windows (>= 1.2.2)
+    apt (2.4.0)
+    ark (0.9.0)
+      7-zip (>= 0.0.0)
+      windows (>= 0.0.0)
+    build-essential (2.0.4)
+    chef_handler (1.1.6)
+    ruby_build (0.8.0)
+    sudo (2.7.0)
+    users (1.7.0)
+    windows (1.34.0)
+      chef_handler (>= 0.0.0)
+
+GIT
+  remote: https://github.com/ArtemPyanykh/chef-chruby
+  ref: master
+  sha: 3fc6e9b997c6dcb90a55c04d3465c03c0078418f
+  specs:
+    chruby (0.1.2)
+      ark (>= 0.0.0)
+
+GIT
+  remote: https://github.com/ArtemPyanykh/chef-ruby
+  ref: master
+  sha: e3673ff9d3a7b3610145366cc5707eef60f164ad
+  specs:
+    ruby (0.1.1)
+      chruby (>= 0.0.0)
+      ruby_build (>= 0.0.0)
+
+PATH
+  remote: site-cookbooks/app-server
+  specs:
+    app-server (0.1.0)
+
+PATH
+  remote: site-cookbooks/base
+  specs:
+    base (0.1.0)
+      sudo (>= 0.0.0)
+      users (>= 0.0.0)
+
+DEPENDENCIES
+  app-server (>= 0)
+  apt (>= 0)
+  base (>= 0)
+  build-essential (>= 0)
+  chruby (>= 0)
+  ruby (>= 0)
+

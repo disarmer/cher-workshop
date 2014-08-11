@@ -7,7 +7,8 @@ directory "/var/www" do
 end
 
 [
-  "/var/www/app"
+  "/var/www/app",
+  "/var/www/rdeploy"
 ].each do |dir|
   directory dir do
     owner "deploy"

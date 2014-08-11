@@ -7,15 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "base"
+
 include_recipe "app-server::directories"
 
-#include_recipe "ruby"
+include_recipe "ruby"
 
-#ruby_setup node[:ruby][:version] do
-#  config_destination "/home/deploy/sources.d/chruby.sh" # autoload chruby
-#  with_bundler true
-#  user "deploy"
-#  group "deploy"
-#  action [:install, :copy_config]
-#end
+ruby_setup node[:ruby][:version] do
+ with_bundler true
+ user "deploy"
+ group "deploy"
+ action [:install]
+end
 

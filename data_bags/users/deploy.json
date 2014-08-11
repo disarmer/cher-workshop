@@ -1,0 +1,7 @@
+{
+  "id": "deploy",
+  "comment": "Deploy User",
+  "groups": ["deploy"],
+  "action": "create",
+  "uid": 1002
+}

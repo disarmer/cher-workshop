@@ -9,9 +9,15 @@
 
 include_recipe "users"
 
-users_manage "deploy" do
-  group_id node[:base][:group_id]
+user "deploy" do
+  supports :manage_home => true
+  comment "Random User"
+  uid 1234
+  gid "deploy"
+  home "/home/deploy"
+  shell "/bin/bash"
 end
+
 sudo "deploy" do
   user "deploy"
   nopasswd true
